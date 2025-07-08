@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { getPokemon, getTypeColor } from '@/lib/pokemon-api';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -315,12 +316,12 @@ export default async function PokemonDetailPage({ params }: PokemonDetailPagePro
         </div>
       </div>
     );
-  } catch (error) {
+  } catch (_error) {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-red-600 mb-4">Pokémon Not Found</h1>
-          <p className="text-gray-600 mb-4">The Pokémon you're looking for doesn't exist.</p>
+          <p className="text-gray-600 mb-4">The Pokémon you&rsquo;re looking for doesn&rsquo;t exist.</p>
           <Link href="/">
             <Button>Return to Pokédex</Button>
           </Link>
