@@ -86,7 +86,7 @@ export function PokemonGrid() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       searchPokemon(searchTerm);
-    }, 300); // Debounce search
+    }, 500); // Debounce search
     
     return () => clearTimeout(timeoutId);
   }, [searchTerm, searchPokemon]);
